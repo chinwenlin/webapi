@@ -1,0 +1,78 @@
+<div class="login-dark">
+<form   [formGroup]="uploadForm" (ngSubmit)="logForm(uploadForm.value);onSubmit()">
+
+    <h2 class="h4 mb-4">Donation Form</h2>
+    <div class="form-row mb-4">
+        <div class="col">
+        <label>Firstname:</label>
+        <input class="form-control"type="text" name="firstname" id="field1" formControlName="firstname">
+        <span class="alert"*ngIf="isValid('firstname')">FirstName can not be blank</span>
+        </div>
+    <div class="col">
+        <label>Lastname:</label>
+        <input class="form-control"type="text" name="lastname" id="field2" formControlName="lastname">
+        <span class="alert"*ngIf="isValid('lastname')">Last Name is required</span>
+    </div>
+   <div class="col">
+        <label>Phone:</label>
+        <input class="form-control"type="text" name="phone" id="field3" formControlName="phone">
+        
+    </div>
+    </div>
+    <div class="form-row mb-4">
+    <label>Email:</label>
+        <input class="form-control"type="email"name="email" id="field4" formControlName="email">
+    </div>
+      
+    <div  class="form-row mb-4">
+            <div class="col">
+        <label>Street:</label>
+        <input class="form-control"type="text" name="street"  formControlName="street"> 
+            </div>
+            <div class="col">
+        <label>City:</label>
+        <input class="form-control"type="text" name="city"  formControlName="city">
+            </div>
+            <div class="col">
+        <label>State:</label>
+        <input class="form-control"type="text" name="state"  formControlName="state">
+            </div>
+     </div>   
+     <div  class="form-row mb-4">   
+            <div class="col">   
+        <label>Zip code:</label>
+        <input class="form-control"type="text" name="zip"  formControlName="zip">
+            </div>
+            <div class="col">
+        <label>Country:</label>
+        <input class="form-control"type="text" name="country"  formControlName="country">
+            </div>
+    </div>     
+    <div class="form-row mb-4">
+            <div class="col">
+        <label>Donation Type:</label>
+        <select class="form-control"formControlName="donationtype">
+            <option >Mighty Warriors</option>
+            <option>Run for the sun</option>
+            <option >Mission Trip</option>
+            <option >Memorial Gift</option>
+        </select>
+            </div>
+    
+    
+            <div class="col">
+        <label>Amount:</label>
+        <input class="form-control"type="text" name="amount" formControlName="amount">
+        <span class="alert"*ngIf="isValid('amount')">Amount is required</span>
+            </div>
+        </div>
+    
+    <div>
+      <button class="btn btn-primary" type="submit" > Continue</button>
+    </div>
+    <div>
+      <button class="btn btn-primary" type="button" (click)="back()" >Cancel</button>
+</div>
+ </form>
+</div>
+<div class="login-dark"></div>

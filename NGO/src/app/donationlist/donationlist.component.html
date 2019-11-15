@@ -1,0 +1,37 @@
+<p>donationlist works!</p>
+
+ <h2>{{ErrorMsg}}</h2>
+
+<table class="table table-bordered " width="30%">
+    <thead class="thead-dark"><tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <!-- <th>Phone</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip code</th> -->
+        <!-- <th>Country</th> -->
+        <th>Donation Type</th>
+        <th>Amount</th>
+    </tr>
+    </thead>
+    <tbody class="tbody-light">
+        <tr *ngFor="let d of donationlist">
+            <th>{{d.firstName}}</th>
+            <th>{{d.lastName}}</th>
+            <!-- <th>{{d.Email}}</th>
+            <th>{{d.Phone}}</th>
+            <th>{{d.Address}}</th>
+            <th>{{d.City}}</th>
+            <th>{{d.State}}</th>
+            <th>{{d.Zipcode}}</th>
+            <th>{{d.Country}}</th> -->
+            <th>{{d.dtype}}</th>
+            <th>{{d.amount|currency}}</th>
+
+        </tr>
+    </tbody>
+</table>
+    <button type="button" [routerLink]="['/login']">Back</button> 

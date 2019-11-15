@@ -1,0 +1,26 @@
+<h2>You have submit your donation!!!</h2>
+<div class="card border-secondary mb-3" style="max-width: 20rem;">
+<table class="table table-hover">
+ <thead>
+         <tr>
+          
+        <th>FirstName:</th>
+        <th>LastName:</th>
+        <th>Donation Type: </th>
+        <th>Amount:</th>
+
+    <tr>
+        </thead>
+        <tbody>
+        <tr>
+                <th>{{data.FirstName}}</th>
+                <th> {{data.LastName}}</th>       
+                <th> {{data.Dtype}}</th>      
+                <th>{{data.Amount}}</th>
+        </tr>
+</tbody>
+</table>
+</div>
+<a [routerLink]="['/login']">Back to Login</a>
+
+

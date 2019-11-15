@@ -1,0 +1,11 @@
+<p>Make a donations!</p>
+{{donations|json}}
+<h2>Click on any one donation type to continue!</h2>
+       <div *ngFor="let donation of donations">
+                <button type="button" class="btn btn-secondary" [routerLink]="['/form']"> {{donation.type}} </button>
+        </div>
+
+        <div>
+            <a  [routerLink]="['/login']">Back</a>
+        </div>
+  
